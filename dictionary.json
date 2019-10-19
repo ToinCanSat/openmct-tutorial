@@ -35,17 +35,10 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "format": "enum",
-                    "enumerations": [
-                        {
-                            "string": "ON",
-                            "value": 1
-                        },
-                        {
-                            "string": "OFF",
-                            "value": 0
-                        }
-                    ],
+                    "units": "toin",
+                    "format": "float",
+                    "min": 0,
+                    "max": 100,
                     "hints": {
                         "range": 1
                     }
@@ -68,7 +61,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "bytes",
+                    "units": "toin",
                     "format": "integer",
                     "hints": {
                         "range": 1
@@ -92,7 +85,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "bytes",
+                    "units": "degree",
                     "format": "integer",
                     "hints": {
                         "range": 1
@@ -116,7 +109,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "℃",
+                    "units": "hPa",
                     "format": "float",
                     "hints": {
                         "range": 1
@@ -140,7 +133,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "Amps",
+                    "units": "lux",
                     "format": "float",
                     "hints": {
                         "range": 1
@@ -164,7 +157,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "Volts",
+                    "units": "degree",
                     "format": "float",
                     "hints": {
                         "range": 1
@@ -188,7 +181,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "Volts",
+                    "units": "degree",
                     "format": "float",
                     "hints": {
                         "range": 1
@@ -212,7 +205,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "Volts",
+                    "units": "degree",
                     "format": "float",
                     "hints": {
                         "range": 1
@@ -236,7 +229,7 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "Volts",
+                    "units": "m",
                     "format": "float",
                     "hints": {
                         "range": 1
