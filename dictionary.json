@@ -62,6 +62,7 @@
             ]
         },
         {
+            "name":"Acceleration Z",
             "key": "comms.recd",
             "values": [
                 {
@@ -85,8 +86,8 @@
             ]
         },
         {
-            "name": "Acceleration Z",
-            "key": "prop.accel_z",
+            "name": "temp",
+            "key": "prop.temp",
             "values": [
                 {
                     "key": "value",
