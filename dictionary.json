@@ -86,7 +86,7 @@
             ]
         },
         {
-            "name": "temp",
+            "name": "Temperature",
             "key": "prop.temp",
             "values": [
                 {
@@ -110,8 +110,8 @@
             ]
         },
         {
-            "name": "Generator Temperature",
-            "key": "pwr.temp",
+            "name": "Barometric pressure",
+            "key": "press",
             "values": [
                 {
                     "key": "value",
@@ -134,8 +134,8 @@
             ]
         },
         {
-            "name": "Generator Current",
-            "key": "pwr.c",
+            "name": "lux",
+            "key": "lux",
             "values": [
                 {
                     "key": "value",
@@ -158,8 +158,56 @@
             ]
         },
         {
-            "name": "Generator Voltage",
-            "key": "pwr.v",
+            "name": "GyroX",
+            "key": "gyro_x",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "Volts",
+                    "format": "float",
+                    "hints": {
+                        "range": 1
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        }
+        {
+            "name": "GyroY",
+            "key": "gyro_y",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "Volts",
+                    "format": "float",
+                    "hints": {
+                        "range": 1
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        }
+        {
+            "name": "GyroZ",
+            "key": "gyro_z",
             "values": [
                 {
                     "key": "value",
