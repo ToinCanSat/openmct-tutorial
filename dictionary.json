@@ -56,7 +56,7 @@
         },
         {
             "name":"Acceleration Z",
-            "key": "accel_z",
+            "key": "prop.accel_z",
             "values": [
                 {
                     "key": "value",

@@ -6,6 +6,8 @@ let count = 0
 function Spacecraft() {
     this.state = {
         "prop.accel_x": data[count].AccelX,
+        "prop.accel_y": data[count].AccelY,
+        "prop.accel_z": data[count].AccelZ,
         "prop.thrusters": "OFF",
         "comms.recd": 0,
         "comms.sent": 0,
@@ -19,10 +21,14 @@ function Spacecraft() {
         this.history[k] = [];
     }, this);
 
-    setInterval(function () {
+    const setTimer = (wait = 1000) =>     setTimeout( () => {
+        console.log(count)
         this.updateState();
         this.generateTelemetry();
-    }.bind(this), 10);
+        setTimer(1000 * (data[count].time_s - data[count - 1].time_s))
+    }, wait);
+
+    setTimer()
 
     console.log("Example spacecraft launched!");
     console.log("Press Enter to toggle thruster state.");
@@ -39,6 +45,8 @@ function Spacecraft() {
 Spacecraft.prototype.updateState = function () {
     count ++
     this.state["prop.accel_x"] = data[count].AccelX
+    this.state["prop.accel_y"] = data[count].AccelY
+    this.state["prop.accel_z"] = data[count].AccelZ
     this.state["pwr.temp"] = this.state["pwr.temp"] * 0.985
         + Math.random() * 0.25 + Math.sin(Date.now());
     if (this.state["prop.thrusters"] === "ON") {
