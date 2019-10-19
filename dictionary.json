@@ -1,15 +1,15 @@
 {
-    "name": "Example Spacecraft",
+    "name": "ToinCanSarRocket",
     "key": "sc",
     "measurements": [
         {
-            "name": "Fuel",
-            "key": "prop.fuel",
+            "name": "Acceleration X",
+            "key": "prop.accel_x",
             "values": [
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "kilograms",
+                    "units": "toin",
                     "format": "float",
                     "min": 0,
                     "max": 100,
