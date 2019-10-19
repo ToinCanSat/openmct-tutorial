@@ -1,5 +1,5 @@
 {
-    "name": "ToinCanSarRocket",
+    "name": "ToinCanSatRocket",
     "key": "sc",
     "measurements": [
         {
@@ -35,17 +35,10 @@
                 {
                     "key": "value",
                     "name": "Value",
-                    "format": "enum",
-                    "enumerations": [
-                        {
-                            "string": "ON",
-                            "value": 1
-                        },
-                        {
-                            "string": "OFF",
-                            "value": 0
-                        }
-                    ],
+                    "units": "toin",
+                    "format": "float",
+                    "min": 0,
+                    "max": 100,
                     "hints": {
                         "range": 1
                     }
@@ -62,12 +55,13 @@
             ]
         },
         {
-            "key": "comms.recd",
+            "name":"Acceleration Z",
+            "key": "accel_z",
             "values": [
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "bytes",
+                    "units": "toin",
                     "format": "integer",
                     "hints": {
                         "range": 1
@@ -85,13 +79,13 @@
             ]
         },
         {
-            "name": "Acceleration Z",
-            "key": "prop.accel_z",
+            "name": "Temperature",
+            "key": "prop.temp",
             "values": [
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "bytes",
+                    "units": "degree",
                     "format": "integer",
                     "hints": {
                         "range": 1
@@ -109,13 +103,13 @@
             ]
         },
         {
-            "name": "Generator Temperature",
-            "key": "pwr.temp",
+            "name": "Barometric pressure",
+            "key": "press",
             "values": [
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "℃",
+                    "units": "hPa",
                     "format": "float",
                     "hints": {
                         "range": 1
@@ -133,13 +127,13 @@
             ]
         },
         {
-            "name": "Generator Current",
-            "key": "pwr.c",
+            "name": "lux",
+            "key": "lux",
             "values": [
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "Amps",
+                    "units": "lux",
                     "format": "float",
                     "hints": {
                         "range": 1
@@ -157,13 +151,85 @@
             ]
         },
         {
-            "name": "Generator Voltage",
-            "key": "pwr.v",
+            "name": "GyroX",
+            "key": "gyro_x",
             "values": [
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "Volts",
+                    "units": "degree",
+                    "format": "float",
+                    "hints": {
+                        "range": 1
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "GyroY",
+            "key": "gyro_y",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "degree",
+                    "format": "float",
+                    "hints": {
+                        "range": 1
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "GyroZ",
+            "key": "gyro_z",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "degree",
+                    "format": "float",
+                    "hints": {
+                        "range": 1
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Altitude",
+            "key": "alt",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "m",
                     "format": "float",
                     "hints": {
                         "range": 1
