@@ -4,7 +4,7 @@
 
 function Spacecraft() {
     this.state = {
-        "prop.fuel": 77,
+        "prop.accel_x": 77,
         "prop.thrusters": "OFF",
         "comms.recd": 0,
         "comms.sent": 0,
@@ -36,9 +36,9 @@ function Spacecraft() {
 };
 
 Spacecraft.prototype.updateState = function () {
-    this.state["prop.fuel"] = Math.max(
+    this.state["prop.accel_x"] = Math.max(
         0,
-        this.state["prop.fuel"] -
+        this.state["prop.accel_x"] -
             (this.state["prop.thrusters"] === "ON" ? 0.5 : 0)
     );
     this.state["pwr.temp"] = this.state["pwr.temp"] * 0.985

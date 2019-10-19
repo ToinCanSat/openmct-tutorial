@@ -1,15 +1,15 @@
 {
-    "name": "Example Spacecraft",
+    "name": "ToinCanSarRocket",
     "key": "sc",
     "measurements": [
         {
-            "name": "Fuel",
-            "key": "prop.fuel",
+            "name": "Acceleration X",
+            "key": "prop.accel_x",
             "values": [
                 {
                     "key": "value",
                     "name": "Value",
-                    "units": "kilograms",
+                    "units": "toin",
                     "format": "float",
                     "min": 0,
                     "max": 100,
@@ -29,8 +29,8 @@
             ]
         },
         {
-            "name": "Thrusters",
-            "key": "prop.thrusters",
+            "name": "Acceleration Y",
+            "key": "prop.accel_y",
             "values": [
                 {
                     "key": "value",
@@ -62,7 +62,6 @@
             ]
         },
         {
-            "name": "Received",
             "key": "comms.recd",
             "values": [
                 {
@@ -86,8 +85,8 @@
             ]
         },
         {
-            "name": "Sent",
-            "key": "comms.sent",
+            "name": "Acceleration Z",
+            "key": "prop.accel_z",
             "values": [
                 {
                     "key": "value",
