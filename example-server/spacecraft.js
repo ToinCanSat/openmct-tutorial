@@ -1,10 +1,11 @@
 /*
  Spacecraft.js simulates a small spacecraft generating telemetry.
 */
-
+const data = require("./cansat")
+let count = 0
 function Spacecraft() {
     this.state = {
-        "prop.accel_x": 77,
+        "prop.accel_x": data[count].AccelX,
         "prop.thrusters": "OFF",
         "comms.recd": 0,
         "comms.sent": 0,
@@ -21,7 +22,7 @@ function Spacecraft() {
     setInterval(function () {
         this.updateState();
         this.generateTelemetry();
-    }.bind(this), 1000);
+    }.bind(this), 10);
 
     console.log("Example spacecraft launched!");
     console.log("Press Enter to toggle thruster state.");
@@ -36,11 +37,8 @@ function Spacecraft() {
 };
 
 Spacecraft.prototype.updateState = function () {
-    this.state["prop.accel_x"] = Math.max(
-        0,
-        this.state["prop.accel_x"] -
-            (this.state["prop.thrusters"] === "ON" ? 0.5 : 0)
-    );
+    count ++
+    this.state["prop.accel_x"] = data[count].AccelX
     this.state["pwr.temp"] = this.state["pwr.temp"] * 0.985
         + Math.random() * 0.25 + Math.sin(Date.now());
     if (this.state["prop.thrusters"] === "ON") {
