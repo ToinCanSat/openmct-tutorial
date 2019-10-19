@@ -7,10 +7,16 @@ function Spacecraft() {
     this.state = {
         "prop.accel_x": data[count].AccelX,
         "prop.accel_y": data[count].AccelY,
+<<<<<<< HEAD
+        "prop.accel_z": data[count].AccelZ,  
+        "prop.temp": data[count].temp,
+        "prop.lux": data[count].lux,
+=======
         "prop.accel_z": data[count].AccelZ,
         "prop.temp": data[count].temp,
         "press": data[count].press,
         "lux": data[count].lux,
+>>>>>>> 0c4aecac6832f6c8f4f94007da08121cc6cd538d
         "prop.thrusters": "OFF",
         "comms.recd": 0,
         "comms.sent": 0,
@@ -50,9 +56,14 @@ Spacecraft.prototype.updateState = function () {
     this.state["prop.accel_x"] = data[count].AccelX
     this.state["prop.accel_y"] = data[count].AccelY
     this.state["prop.accel_z"] = data[count].AccelZ
+<<<<<<< HEAD
+    this.state["prop.temp"] = data[count].temp
+    this.state["prop.lux"] = data[count].lux
+=======
     this.state["press"] = data[count].press
     this.state["prop.temp"] = data[count].temp
     this.state["lux"] = data[count].lux
+>>>>>>> 0c4aecac6832f6c8f4f94007da08121cc6cd538d
     this.state["pwr.temp"] = this.state["pwr.temp"] * 0.985
         + Math.random() * 0.25 + Math.sin(Date.now());
     if (this.state["prop.thrusters"] === "ON") {
