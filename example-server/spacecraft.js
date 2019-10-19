@@ -28,7 +28,7 @@ function Spacecraft() {
         console.log(count)
         this.updateState();
         this.generateTelemetry();
-        setTimer(1000 * (data[count].time_s - data[count - 1].time_s))
+        setTimer(8000 * (data[count].time_s - data[count - 1].time_s))
     }, wait);
 
     setTimer()
