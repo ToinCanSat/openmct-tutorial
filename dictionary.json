@@ -85,8 +85,8 @@
             ]
         },
         {
-            "name": "Sent",
-            "key": "comms.sent",
+            "name": "Acceleration Z",
+            "key": "prop.accel_z",
             "values": [
                 {
                     "key": "value",
