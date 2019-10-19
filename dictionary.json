@@ -63,7 +63,7 @@
         },
         {
             "name":"Acceleration Z",
-            "key": "comms.recd",
+            "key": "accel_z",
             "values": [
                 {
                     "key": "value",
