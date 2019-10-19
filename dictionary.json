@@ -29,8 +29,8 @@
             ]
         },
         {
-            "name": "Thrusters",
-            "key": "prop.thrusters",
+            "name": "Acceleration Y",
+            "key": "prop.accel_y",
             "values": [
                 {
                     "key": "value",
@@ -62,7 +62,6 @@
             ]
         },
         {
-            "name": "Received",
             "key": "comms.recd",
             "values": [
                 {
